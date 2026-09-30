@@ -42,6 +42,8 @@
         return;
       }
       if (result.request_id !== attempt.id) throw new Error('INVALID_RESPONSE');
+      const campaign = window.LEWEST_CAMPAIGN || {};
+      if (window.gtag) window.gtag('event','lead_submit',{interest_type:data.interest_type||'unspecified',visit_date_selected:Boolean(data.visit_date),...campaign});
       form.reset(); attempt = null;
       status.textContent = '관심고객등록이 완료되었습니다.';
     } catch (error) {
