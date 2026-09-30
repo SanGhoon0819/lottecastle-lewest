@@ -1,7 +1,7 @@
 // V13 functionality is isolated from the deferred plans.html page.
 (() => {
-  // Keep the existing optional analytics hooks; no IDs or receiver are configured.
-  window.LEWEST = window.LEWEST || {phone:'1877-2027',tracking:{ga4:'',metaPixel:'',naver:''}};
+  // GA4 measurement ID for lottecastlelewest.kr.
+  window.LEWEST = window.LEWEST || {phone:'1877-2027',tracking:{ga4:'G-T4FMP9FTD0',metaPixel:'',naver:''}};
   const campaign = {};
   const query = new URLSearchParams(location.search);
   for(const key of ['utm_source','utm_medium','utm_campaign','utm_content','utm_term']){
